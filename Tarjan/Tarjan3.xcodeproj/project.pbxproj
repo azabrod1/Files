@@ -1,0 +1,400 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA264E941EAE02D100495B2C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA264E931EAE02D100495B2C /* main.cpp */; };
+		FA71E7CE1EB0FF4E00D263B0 /* search.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA71E7CC1EB0FF4E00D263B0 /* search.cpp */; };
+		FA7A3FB81EB687CD00E5321C /* multiThreadedTarjan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA7A3FB61EB687CD00E5321C /* multiThreadedTarjan.cpp */; };
+		FA977EA61ECCE1890098A241 /* libtbb.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FA977EA31ECCE1890098A241 /* libtbb.dylib */; };
+		FA977EA71ECCE1890098A241 /* libtbbmalloc_proxy.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FA977EA41ECCE1890098A241 /* libtbbmalloc_proxy.dylib */; };
+		FA977EA81ECCE1890098A241 /* libtbbmalloc.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FA977EA51ECCE1890098A241 /* libtbbmalloc.dylib */; };
+		FA977EA91ECCE2140098A241 /* libtbb.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA977EA31ECCE1890098A241 /* libtbb.dylib */; };
+		FA977EAA1ECCE2140098A241 /* libtbbmalloc_proxy.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA977EA41ECCE1890098A241 /* libtbbmalloc_proxy.dylib */; };
+		FA977EAB1ECCE2140098A241 /* libtbbmalloc.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA977EA51ECCE1890098A241 /* libtbbmalloc.dylib */; };
+		FA977EB11ECEF6E60098A241 /* suspensionManager2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA977EAF1ECEF6E60098A241 /* suspensionManager2.cpp */; };
+		FAD465341EB6145B00B13FF1 /* typedefs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD465331EB6145B00B13FF1 /* typedefs.cpp */; };
+		FAE045A71EC34721003E0737 /* worker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAE045A51EC34721003E0737 /* worker.cpp */; };
+		FAE6B98D1EB21D85007B944B /* tarjan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAE6B98B1EB21D85007B944B /* tarjan.cpp */; };
+		FAE6B9921EB38C59007B944B /* singleThreadedTarjan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAE6B9911EB38C59007B944B /* singleThreadedTarjan.cpp */; };
+		FAE6B9951EB39764007B944B /* utilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAE6B9931EB39764007B944B /* utilities.cpp */; };
+		FAEF89F71EBA610600F77957 /* suspensionManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAEF89F51EBA610600F77957 /* suspensionManager.cpp */; };
+		FAEF89FA1EBF35D700F77957 /* stealingQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAEF89F81EBF35D700F77957 /* stealingQueue.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FA264E8E1EAE02D100495B2C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				FA977EA91ECCE2140098A241 /* libtbb.dylib in CopyFiles */,
+				FA977EAA1ECCE2140098A241 /* libtbbmalloc_proxy.dylib in CopyFiles */,
+				FA977EAB1ECCE2140098A241 /* libtbbmalloc.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FA25AD091EC74F0600C09D5F /* worker.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = worker.hpp; path = ../worker.hpp; sourceTree = "<group>"; };
+		FA264E901EAE02D100495B2C /* Tarjan3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Tarjan3; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA264E931EAE02D100495B2C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		FA264E9D1EAE046D00495B2C /* graph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = graph.h; sourceTree = "<group>"; };
+		FA264E9E1EAE09F500495B2C /* directedHashGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = directedHashGraph.h; sourceTree = "<group>"; };
+		FA4A1B221EC1184F00E01FF4 /* simpleClock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = simpleClock.h; sourceTree = "<group>"; };
+		FA71E7CA1EAF8AE200D263B0 /* tarjanStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tarjanStack.h; sourceTree = "<group>"; };
+		FA71E7CB1EAF8B0500D263B0 /* cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cell.h; sourceTree = "<group>"; };
+		FA71E7CC1EB0FF4E00D263B0 /* search.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = search.cpp; sourceTree = "<group>"; };
+		FA71E7CD1EB0FF4E00D263B0 /* search.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = search.hpp; sourceTree = "<group>"; };
+		FA7A3FB61EB687CD00E5321C /* multiThreadedTarjan.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = multiThreadedTarjan.cpp; sourceTree = "<group>"; };
+		FA7A3FB71EB687CD00E5321C /* multiThreadedTarjan.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = multiThreadedTarjan.hpp; sourceTree = "<group>"; };
+		FA7A3FB91EB6A7D700E5321C /* dictIterator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dictIterator.h; sourceTree = "<group>"; };
+		FA7A3FBB1EB74EF600E5321C /* mutexDictIterator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = mutexDictIterator.hpp; sourceTree = "<group>"; };
+		FA977E8A1ECB44670098A241 /* Tarjan.profdata */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tarjan.profdata; sourceTree = "<group>"; };
+		FA977EA31ECCE1890098A241 /* libtbb.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libtbb.dylib; path = ../../../../Cellar/tbb/2017_U6/lib/libtbb.dylib; sourceTree = "<group>"; };
+		FA977EA41ECCE1890098A241 /* libtbbmalloc_proxy.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libtbbmalloc_proxy.dylib; path = ../../../../Cellar/tbb/2017_U6/lib/libtbbmalloc_proxy.dylib; sourceTree = "<group>"; };
+		FA977EA51ECCE1890098A241 /* libtbbmalloc.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libtbbmalloc.dylib; path = ../../../../Cellar/tbb/2017_U6/lib/libtbbmalloc.dylib; sourceTree = "<group>"; };
+		FA977EAC1ECCE2FF0098A241 /* tbb_concurrent_map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tbb_concurrent_map.h; sourceTree = "<group>"; };
+		FA977EAE1ECE49410098A241 /* SimpleSharded.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleSharded.h; sourceTree = "<group>"; };
+		FA977EAF1ECEF6E60098A241 /* suspensionManager2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = suspensionManager2.cpp; sourceTree = "<group>"; };
+		FA977EB01ECEF6E60098A241 /* suspensionManager2.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = suspensionManager2.hpp; sourceTree = "<group>"; };
+		FAD465331EB6145B00B13FF1 /* typedefs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = typedefs.cpp; sourceTree = "<group>"; };
+		FAE045A51EC34721003E0737 /* worker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = worker.cpp; sourceTree = "<group>"; };
+		FAE6B98B1EB21D85007B944B /* tarjan.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tarjan.cpp; sourceTree = "<group>"; };
+		FAE6B98C1EB21D85007B944B /* tarjan.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = tarjan.hpp; sourceTree = "<group>"; };
+		FAE6B98E1EB2AE39007B944B /* neighborQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = neighborQueue.h; sourceTree = "<group>"; };
+		FAE6B98F1EB2C013007B944B /* singleThreadedTarjan.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = singleThreadedTarjan.h; sourceTree = "<group>"; };
+		FAE6B9901EB2C1BE007B944B /* typedefs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = typedefs.h; sourceTree = "<group>"; };
+		FAE6B9911EB38C59007B944B /* singleThreadedTarjan.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = singleThreadedTarjan.cpp; sourceTree = "<group>"; };
+		FAE6B9931EB39764007B944B /* utilities.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = utilities.cpp; sourceTree = "<group>"; };
+		FAE6B9941EB39764007B944B /* utilities.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = utilities.hpp; sourceTree = "<group>"; };
+		FAE6B9961EB4A13C007B944B /* dictionary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dictionary.h; sourceTree = "<group>"; };
+		FAE6B9971EB4AD10007B944B /* mutexDict.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mutexDict.h; sourceTree = "<group>"; };
+		FAEF89F51EBA610600F77957 /* suspensionManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = suspensionManager.cpp; sourceTree = "<group>"; };
+		FAEF89F61EBA610600F77957 /* suspensionManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = suspensionManager.hpp; sourceTree = "<group>"; };
+		FAEF89F81EBF35D700F77957 /* stealingQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stealingQueue.cpp; sourceTree = "<group>"; };
+		FAEF89F91EBF35D700F77957 /* stealingQueue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = stealingQueue.hpp; sourceTree = "<group>"; };
+		FAEF89FC1EBFDD3200F77957 /* pending.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = pending.hpp; sourceTree = "<group>"; };
+		FAF29C911ED0A7F000B021D5 /* lockFreeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lockFreeCell.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA264E8D1EAE02D100495B2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA977EA61ECCE1890098A241 /* libtbb.dylib in Frameworks */,
+				FA977EA71ECCE1890098A241 /* libtbbmalloc_proxy.dylib in Frameworks */,
+				FA977EA81ECCE1890098A241 /* libtbbmalloc.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA264E871EAE02D100495B2C = {
+			isa = PBXGroup;
+			children = (
+				FA264E921EAE02D100495B2C /* Tarjan3 */,
+				FA264E911EAE02D100495B2C /* Products */,
+				FA977E891ECB44670098A241 /* OptimizationProfiles */,
+				FA977EA21ECCE1890098A241 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FA264E911EAE02D100495B2C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA264E901EAE02D100495B2C /* Tarjan3 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA264E921EAE02D100495B2C /* Tarjan3 */ = {
+			isa = PBXGroup;
+			children = (
+				FA71E7CB1EAF8B0500D263B0 /* cell.h */,
+				FAF29C911ED0A7F000B021D5 /* lockFreeCell.h */,
+				FAE6B9961EB4A13C007B944B /* dictionary.h */,
+				FA7A3FB91EB6A7D700E5321C /* dictIterator.h */,
+				FA264E9E1EAE09F500495B2C /* directedHashGraph.h */,
+				FA264E9D1EAE046D00495B2C /* graph.h */,
+				FA264E931EAE02D100495B2C /* main.cpp */,
+				FA7A3FB61EB687CD00E5321C /* multiThreadedTarjan.cpp */,
+				FA7A3FB71EB687CD00E5321C /* multiThreadedTarjan.hpp */,
+				FAE6B9971EB4AD10007B944B /* mutexDict.h */,
+				FA7A3FBB1EB74EF600E5321C /* mutexDictIterator.hpp */,
+				FA977EAE1ECE49410098A241 /* SimpleSharded.h */,
+				FAE6B98E1EB2AE39007B944B /* neighborQueue.h */,
+				FAEF89FC1EBFDD3200F77957 /* pending.hpp */,
+				FA71E7CC1EB0FF4E00D263B0 /* search.cpp */,
+				FA71E7CD1EB0FF4E00D263B0 /* search.hpp */,
+				FA4A1B221EC1184F00E01FF4 /* simpleClock.h */,
+				FAE6B9911EB38C59007B944B /* singleThreadedTarjan.cpp */,
+				FAE6B98F1EB2C013007B944B /* singleThreadedTarjan.h */,
+				FAEF89F81EBF35D700F77957 /* stealingQueue.cpp */,
+				FAEF89F91EBF35D700F77957 /* stealingQueue.hpp */,
+				FAEF89F51EBA610600F77957 /* suspensionManager.cpp */,
+				FAEF89F61EBA610600F77957 /* suspensionManager.hpp */,
+				FA977EAF1ECEF6E60098A241 /* suspensionManager2.cpp */,
+				FA977EB01ECEF6E60098A241 /* suspensionManager2.hpp */,
+				FAE6B98B1EB21D85007B944B /* tarjan.cpp */,
+				FAE6B98C1EB21D85007B944B /* tarjan.hpp */,
+				FA71E7CA1EAF8AE200D263B0 /* tarjanStack.h */,
+				FA977EAC1ECCE2FF0098A241 /* tbb_concurrent_map.h */,
+				FAD465331EB6145B00B13FF1 /* typedefs.cpp */,
+				FAE6B9901EB2C1BE007B944B /* typedefs.h */,
+				FAE6B9931EB39764007B944B /* utilities.cpp */,
+				FAE6B9941EB39764007B944B /* utilities.hpp */,
+				FAE045A51EC34721003E0737 /* worker.cpp */,
+				FA25AD091EC74F0600C09D5F /* worker.hpp */,
+			);
+			name = Tarjan3;
+			path = Tarjan;
+			sourceTree = "<group>";
+		};
+		FA977E891ECB44670098A241 /* OptimizationProfiles */ = {
+			isa = PBXGroup;
+			children = (
+				FA977E8A1ECB44670098A241 /* Tarjan.profdata */,
+			);
+			path = OptimizationProfiles;
+			sourceTree = "<group>";
+		};
+		FA977EA21ECCE1890098A241 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA977EA31ECCE1890098A241 /* libtbb.dylib */,
+				FA977EA41ECCE1890098A241 /* libtbbmalloc_proxy.dylib */,
+				FA977EA51ECCE1890098A241 /* libtbbmalloc.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA264E8F1EAE02D100495B2C /* Tarjan3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA264E971EAE02D100495B2C /* Build configuration list for PBXNativeTarget "Tarjan3" */;
+			buildPhases = (
+				FA264E8C1EAE02D100495B2C /* Sources */,
+				FA264E8D1EAE02D100495B2C /* Frameworks */,
+				FA264E8E1EAE02D100495B2C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tarjan3;
+			productName = Tarjan;
+			productReference = FA264E901EAE02D100495B2C /* Tarjan3 */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA264E881EAE02D100495B2C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Alex Zabrodskiy";
+				TargetAttributes = {
+					FA264E8F1EAE02D100495B2C = {
+						CreatedOnToolsVersion = 8.3.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = FA264E8B1EAE02D100495B2C /* Build configuration list for PBXProject "Tarjan3" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FA264E871EAE02D100495B2C;
+			productRefGroup = FA264E911EAE02D100495B2C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA264E8F1EAE02D100495B2C /* Tarjan3 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA264E8C1EAE02D100495B2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA7A3FB81EB687CD00E5321C /* multiThreadedTarjan.cpp in Sources */,
+				FAE6B9951EB39764007B944B /* utilities.cpp in Sources */,
+				FA264E941EAE02D100495B2C /* main.cpp in Sources */,
+				FA71E7CE1EB0FF4E00D263B0 /* search.cpp in Sources */,
+				FAE6B9921EB38C59007B944B /* singleThreadedTarjan.cpp in Sources */,
+				FAEF89FA1EBF35D700F77957 /* stealingQueue.cpp in Sources */,
+				FAE6B98D1EB21D85007B944B /* tarjan.cpp in Sources */,
+				FAE045A71EC34721003E0737 /* worker.cpp in Sources */,
+				FAD465341EB6145B00B13FF1 /* typedefs.cpp in Sources */,
+				FAEF89F71EBA610600F77957 /* suspensionManager.cpp in Sources */,
+				FA977EB11ECEF6E60098A241 /* suspensionManager2.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FA264E951EAE02D100495B2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		FA264E961EAE02D100495B2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		FA264E981EAE02D100495B2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_OPTIMIZATION_PROFILE_FILE = "";
+				CLANG_USE_OPTIMIZATION_PROFILE = NO;
+				COPY_HEADERS_RUN_UNIFDEF = NO;
+				KEEP_PRIVATE_EXTERNS = NO;
+				LIBRARY_SEARCH_PATHS = /usr/local/opt/tbb/lib;
+				MACH_O_TYPE = mh_execute;
+				"OTHER_LDFLAGS[arch=*]" = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${SRCROOT}\" /usr/local/opt/tbb/include";
+				WARNING_LDFLAGS = v;
+			};
+			name = Debug;
+		};
+		FA264E991EAE02D100495B2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_OPTIMIZATION_PROFILE_FILE = "";
+				CLANG_USE_OPTIMIZATION_PROFILE = NO;
+				COPY_HEADERS_RUN_UNIFDEF = NO;
+				KEEP_PRIVATE_EXTERNS = NO;
+				LIBRARY_SEARCH_PATHS = /usr/local/opt/tbb/lib;
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${SRCROOT}\" /usr/local/opt/tbb/include";
+				WARNING_LDFLAGS = v;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA264E8B1EAE02D100495B2C /* Build configuration list for PBXProject "Tarjan3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA264E951EAE02D100495B2C /* Debug */,
+				FA264E961EAE02D100495B2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA264E971EAE02D100495B2C /* Build configuration list for PBXNativeTarget "Tarjan3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA264E981EAE02D100495B2C /* Debug */,
+				FA264E991EAE02D100495B2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA264E881EAE02D100495B2C /* Project object */;
+}
